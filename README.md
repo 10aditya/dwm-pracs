@@ -9,6 +9,7 @@ $ sudo apt-get install python3
 ```
 
 <br>
+
 ### Command to install pip3 on Ubuntu
 
 ```
@@ -24,6 +25,7 @@ $ pip3 install <ModuleName>
 ```
 
 <br>
+
 ### To run python file:
 
 ```
