@@ -27,25 +27,26 @@ regressor.fit(x_train, y_train)
 
 pred = regressor.predict(x_test)
 
-# print ( y_test, '\n',pred)
+print ( 'Y Test:\n', y_test, '\nY Train:\n' ,pred)
 
-#backward elimination
-x = np.append(arr=np.ones((50,1)).astype(int),values = x,axis=1)
+# NO NEED
+# #backward elimination
+# x = np.append(arr=np.ones((50,1)).astype(int),values = x,axis=1)
 
-x_opt = x[:,[0,1,2,3,4,5]]
-regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
-print(regressor_ols.summary(),'\n')
+# x_opt = x[:,[0,1,2,3,4,5]]
+# regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
+# print(regressor_ols.summary(),'\n')
 
-x_opt = x[:,[0,1,3,4,5]]
-regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
-print(regressor_ols.summary(),'\n')
+# x_opt = x[:,[0,1,3,4,5]]
+# regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
+# print(regressor_ols.summary(),'\n')
 
-x_opt = x[:,[0,3,4,5]]
-regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
-print(regressor_ols.summary(),'\n')
+# x_opt = x[:,[0,3,4,5]]
+# regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
+# print(regressor_ols.summary(),'\n')
 
-x_opt = x[:,[0,3]]
-regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
-print(regressor_ols.summary(),'\n')
+# x_opt = x[:,[0,3]]
+# regressor_ols = sm.OLS(endog=y,exog=x_opt).fit()
+# print(regressor_ols.summary(),'\n')
 
-regressor_ols.predict()
+# regressor_ols.predict()
